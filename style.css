@@ -1,0 +1,146 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Bold';
+  src: url('SpoqaHanSansNeo-Bold.woff2') format(‘woff2’);
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Medium';
+  src: url('SpoqaHanSansNeo-Medium.woff2') format(‘woff2’);
+  font-weight: 600;
+}
+
+html,body { width: 100%; height: 100%; font-family: 'SpoqaHanSansNeo-Medium';}
+p {font-weight: 600;}
+.d-flex {display: flex; justify-content: center; align-items: center;}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F3;
+}
+section {
+  width: calc(600px - 3rem);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+section > div {
+  width: 100%;
+}
+.date-time-wrap {display: flex; justify-content: space-between;}
+.coord {
+  background-color: #DCE7FF; 
+  padding: 4px 8px; 
+  border-radius: 12px;
+  margin-right: 6px;
+}
+.date {margin-right: 6px;}
+.icon {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+.temp-wrap {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.temp-wrap p {
+  font-weight: normal;
+  font-size: 14px;
+}
+.temp-wrap div:first-of-type p:first-of-type {margin-bottom: 6px;}
+.temp-wrap .temp { 
+  font-size: 48px;
+  font-family: 'SpoqaHanSansNeo-Bold';
+  font-weight: bold ;
+}
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.info li {
+  position: relative;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.info li:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.info li div {
+  position: absolute;
+  text-align: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info li div p:first-of-type {color: #3363FF;}
+.info li div p:last-of-type {font-size: 24px;}
+.info li div p span {color: #6C7587; font-size: 16px;}
