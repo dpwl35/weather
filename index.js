@@ -20,7 +20,7 @@ const getCurrentWeather = (latitude, longitude) => {
     city.innerText = data.name;
     weather.innerText = data.weather[0].description;
     icon.classList.add(data.weather[0].icon);
-    icon.src = `/icon/${data.weather[0].icon}.svg`
+    icon.src = `icon/${data.weather[0].icon}.svg`
     temp.innerText =  Math.floor(data.main.temp)+ `°`;
     tempMin.innerText = Math.floor(data.main.temp_min);
     tempMax.innerText = Math.floor(data.main.temp_max);
