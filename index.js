@@ -16,7 +16,6 @@ const getCurrentWeather = (latitude, longitude) => {
     const humidity = document.querySelector('.humidity');
     const rain = document.querySelector('.rain');
     
-
     city.innerText = data.name;
     weather.innerText = data.weather[0].description;
     icon.classList.add(data.weather[0].icon);
@@ -26,7 +25,7 @@ const getCurrentWeather = (latitude, longitude) => {
     tempMax.innerText = Math.floor(data.main.temp_max);
     wind.innerText = data.wind.speed;
     humidity.innerText = data.main.humidity;
-    
+
     //비가 내리지 않아서 강수량이 없을 때 -로 표시하기
     const weatherText = data.weather[0].main;
     if(weatherText == 'Rain'){
@@ -34,9 +33,32 @@ const getCurrentWeather = (latitude, longitude) => {
     }else{
       rain.innerText = '-';
     };
-    console.log(data);
+    
+    //console.log(data);
+
+    const temp2 = temp.innerText.slice(0, -1);
+    const clothes = document.querySelector('.clothes-txt');
+    if( 4 >= temp2 ){
+      clothes.innerText = '패딩, 두꺼운 코트, 누빔 옷, 기모'
+    }else if( 8 >= temp2 ){
+      clothes.innerText = '울 코트, 히트텍, 가죽 옷, 기모'
+    }else if( 11 >= temp2){
+      clothes.innerText = '트렌치 코트, 야상, 점퍼,기모바지'
+    }else if( 16 >= temp2){
+      clothes.innerText = '자켓, 가디건, 청자켓, 니트'
+    }else if( 19 >= temp2){
+      clothes.innerText = '얇은 가디건이나 니트, 맨투맨'
+    }else if( 22 >= temp2){
+      clothes.innerText = '블라우스, 긴팔 티, 면바지'
+    }else if( 27 >= temp2){
+      clothes.innerText = '반팔, 얇은 셔츠, 반바지'
+    }else if( 28 <= temp2){
+      clothes.innerText = '민소매, 반팔, 반바지, 린넨'
+    }
+    
    });
 }
+
 
 const noti = document.querySelector('.noti')
 const weather1 = document.querySelector('.weather')

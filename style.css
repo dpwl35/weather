@@ -63,15 +63,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F3F3F3;
+  /* background-color: #F3F3F3; */
+  background: linear-gradient( to top, transparent, rgb(255, 255, 255), rgb(214, 219, 220));
 }
 section {
   width: calc(600px - 3rem);
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.06);
+  background-color: rgba(238, 240, 241, 0.5);
+  /* box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.06); */
   backdrop-filter: blur(2px);
   padding: 3rem;
   border-radius: 1.5rem;
+  border: 1px solid rgba(172, 175, 176, 0.3);
 }
 section > div{
   width: 100%;
@@ -110,6 +112,17 @@ section .noti {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.page_center__NcdcW::after {
+  content: '';
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+  background: conic-gradient( from 180deg at 50% 50%, #16abff33 0deg, #0885ff33 55deg, #54d6ff33 120deg, #0071ff33 160deg, transparent 360deg );
+  width: 240px;
+  height: 180px;
+  z-index: -1;
 }
 .temp-wrap {
   width: 260px;
@@ -159,3 +172,12 @@ section .noti {
 .info li div p:first-of-type {color: #3363FF;}
 .info li div p span {color: #6C7587; font-size: 16px;}
 .info li div span:first-of-type {font-size: 24px; color: #222;}
+
+.clothes {
+  width: calc(100% - 2rem);
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #6C7587;
+  font-size: 14px;
+}
